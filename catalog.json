@@ -3,7 +3,7 @@
   "id": "https://michalie.github.io/#catalog",
   "title": "AI for Science - Models, Agents & Tools for Researchers",
   "description": "Three curated indexes for finding biological foundation models, autonomous science agents, and privacy-aware coding and data tools.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "date_modified": "2026-07-14",
   "language": "en",
   "access_rights": "public",
@@ -11,7 +11,7 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "code_license": "https://spdx.org/licenses/MIT.html",
   "repository": "https://github.com/MichaLie/MichaLie.github.io",
-  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.0",
+  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.1",
   "creator": {
     "name": "Michaela Liegertová",
     "email": "michaela.liegertova@img.cas.cz",
@@ -40,7 +40,7 @@
     {
       "id": "https://michalie.github.io/bio-foundation-models-wiki/",
       "title": "Biological Foundation Models - Researcher Index",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "record_count": 345,
       "record_type": "models and resources",
       "landing_page": "https://michalie.github.io/bio-foundation-models-wiki/",
@@ -52,7 +52,7 @@
     {
       "id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
       "title": "Autonomous Science Agents - Researcher Index",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "record_count": 372,
       "record_type": "systems and benchmarks",
       "landing_page": "https://michalie.github.io/autonomous-stem-agents-wiki/",
@@ -64,7 +64,7 @@
     {
       "id": "https://michalie.github.io/research-coding-agents-wiki/",
       "title": "AI Coding and Data Agents for Researchers",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "record_count": 43,
       "record_type": "tools",
       "landing_page": "https://michalie.github.io/research-coding-agents-wiki/",

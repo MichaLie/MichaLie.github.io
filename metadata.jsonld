@@ -51,7 +51,7 @@
       "@id": "https://michalie.github.io/bio-foundation-models-wiki/",
       "@type": ["dcat:Dataset", "schema:Dataset"],
       "dct:title": "Biological Foundation Models - Researcher Index",
-      "schema:version": "2.0.0",
+      "schema:version": "2.0.1",
       "dcat:landingPage": {"@id": "https://michalie.github.io/bio-foundation-models-wiki/"},
       "schema:numberOfItems": 345
     },
@@ -59,7 +59,7 @@
       "@id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
       "@type": ["dcat:Dataset", "schema:Dataset"],
       "dct:title": "Autonomous Science Agents - Researcher Index",
-      "schema:version": "2.0.0",
+      "schema:version": "2.0.1",
       "dcat:landingPage": {"@id": "https://michalie.github.io/autonomous-stem-agents-wiki/"},
       "schema:numberOfItems": 372
     },
@@ -67,7 +67,7 @@
       "@id": "https://michalie.github.io/research-coding-agents-wiki/",
       "@type": ["dcat:Dataset", "schema:Dataset"],
       "dct:title": "AI Coding and Data Agents for Researchers",
-      "schema:version": "2.0.0",
+      "schema:version": "2.0.1",
       "dcat:landingPage": {"@id": "https://michalie.github.io/research-coding-agents-wiki/"},
       "schema:numberOfItems": 43
     }
@@ -99,9 +99,9 @@
   "schema:description": "Models, agents and tools for researchers.",
   "schema:url": {"@id": "https://michalie.github.io/"},
   "schema:numberOfItems": 3,
-  "schema:version": "2.0.0",
+  "schema:version": "2.0.1",
   "prov:wasGeneratedBy": {
-    "@id": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.0",
+    "@id": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.1",
     "@type": "prov:Activity",
     "dct:type": "Versioned release build"
   },
