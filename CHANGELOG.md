@@ -2,6 +2,11 @@
 
 All notable public changes to this collection are documented here.
 
+## 2.0.1 — 2026-07-14
+
+- Increased primary descriptive, navigation, community-resource, FAIR-note, and contact text for more comfortable reading across the portal.
+- Synchronized the portal and child-catalog version references to the presentation-only v2.0.1 release; catalog records, counts, evidence, and distribution checksums are unchanged.
+
 ## 2.0.0 — 2026-07-14
 
 - Reorganized the entry page around researcher needs and three specialist indexes.
