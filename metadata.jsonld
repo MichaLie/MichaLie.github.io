@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://michalie.github.io/#catalog",
+  "@type": ["dcat:Catalog", "schema:DataCatalog", "schema:CollectionPage"],
+  "dct:title": "AI for Science - Models, Agents & Tools for Researchers",
+  "dct:description": "Three curated indexes for finding biological foundation models, autonomous science agents, and privacy-aware coding and data tools.",
+  "dct:identifier": "https://michalie.github.io/#catalog",
+  "dct:language": {"@id": "http://id.loc.gov/vocabulary/iso639-1/en"},
+  "dct:modified": {"@type": "xsd:date", "@value": "2026-07-14"},
+  "dct:accessRights": {"@id": "http://publications.europa.eu/resource/authority/access-right/PUBLIC"},
+  "dct:rights": "Portal catalog data, metadata, and original documentation are licensed under CC BY 4.0; portal maintenance code is MIT. Child-catalog external resources, logos, and trademarks retain their own terms. IMG CAS is affiliation only, not publisher or endorsement.",
+  "dct:license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+  "schema:license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+  "dct:source": {"@id": "https://github.com/MichaLie/MichaLie.github.io"},
+  "dct:creator": {
+    "@id": "https://github.com/MichaLie",
+    "@type": "schema:Person",
+    "schema:name": "Michaela Liegertová",
+    "schema:email": "mailto:michaela.liegertova@img.cas.cz",
+    "schema:affiliation": {
+      "@id": "https://www.img.cas.cz/en/",
+      "@type": "schema:Organization",
+      "schema:name": "Institute of Molecular Genetics of the Czech Academy of Sciences"
+    }
+  },
+  "dct:publisher": {
+    "@id": "https://github.com/MichaLie",
+    "@type": "schema:Person",
+    "schema:name": "Michaela Liegertová",
+    "schema:email": "mailto:michaela.liegertova@img.cas.cz",
+    "schema:affiliation": {
+      "@id": "https://www.img.cas.cz/en/",
+      "@type": "schema:Organization",
+      "schema:name": "Institute of Molecular Genetics of the Czech Academy of Sciences"
+    }
+  },
+  "dct:conformsTo": [
+    {"@id": "https://doi.org/10.1038/sdata.2016.18"},
+    {"@id": "https://www.w3.org/TR/vocab-dcat-3/"},
+    {"@id": "https://www.w3.org/TR/json-ld11/"}
+  ],
+  "dct:provenance": "The portal describes three independently curated catalogs. Each child catalog is built deterministically from versioned canonical JSON and publishes synchronized JSON, JSON Schema, and JSON-LD distributions.",
+  "dcat:dataset": [
+    {
+      "@id": "https://michalie.github.io/bio-foundation-models-wiki/",
+      "@type": ["dcat:Dataset", "schema:Dataset"],
+      "dct:title": "Biological Foundation Models - Researcher Index",
+      "schema:version": "2.0.0",
+      "dcat:landingPage": {"@id": "https://michalie.github.io/bio-foundation-models-wiki/"},
+      "schema:numberOfItems": 345
+    },
+    {
+      "@id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+      "@type": ["dcat:Dataset", "schema:Dataset"],
+      "dct:title": "Autonomous Science Agents - Researcher Index",
+      "schema:version": "2.0.0",
+      "dcat:landingPage": {"@id": "https://michalie.github.io/autonomous-stem-agents-wiki/"},
+      "schema:numberOfItems": 372
+    },
+    {
+      "@id": "https://michalie.github.io/research-coding-agents-wiki/",
+      "@type": ["dcat:Dataset", "schema:Dataset"],
+      "dct:title": "AI Coding and Data Agents for Researchers",
+      "schema:version": "2.0.0",
+      "dcat:landingPage": {"@id": "https://michalie.github.io/research-coding-agents-wiki/"},
+      "schema:numberOfItems": 43
+    }
+  ],
+  "dcat:distribution": [
+    {
+      "@id": "https://michalie.github.io/#distribution-html",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {"@id": "https://michalie.github.io/"},
+      "dct:format": {"@id": "https://www.iana.org/assignments/media-types/text/html"},
+      "dct:title": "Human-readable catalog router"
+    },
+    {
+      "@id": "https://michalie.github.io/#distribution-json",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcat:downloadURL": {"@id": "https://michalie.github.io/catalog.json"},
+      "dct:format": {"@id": "https://www.iana.org/assignments/media-types/application/json"},
+      "dct:title": "Machine-readable catalog"
+    },
+    {
+      "@id": "https://michalie.github.io/#distribution-jsonld",
+      "@type": ["dcat:Distribution", "schema:DataDownload"],
+      "dcat:downloadURL": {"@id": "https://michalie.github.io/metadata.jsonld"},
+      "dct:format": {"@id": "https://www.iana.org/assignments/media-types/application/ld+json"},
+      "dct:title": "DCAT and Schema.org catalog metadata"
+    }
+  ],
+  "schema:name": "AI for Science",
+  "schema:description": "Models, agents and tools for researchers.",
+  "schema:url": {"@id": "https://michalie.github.io/"},
+  "schema:numberOfItems": 3,
+  "schema:version": "2.0.0",
+  "prov:wasGeneratedBy": {
+    "@id": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.0",
+    "@type": "prov:Activity",
+    "dct:type": "Versioned release build"
+  },
+  "dct:relation": [
+    {"@id": "https://karelberka.github.io/Alphafoldology/"},
+    {"@id": "https://www.elixir-czech.cz/services"}
+  ],
+  "schema:relatedLink": [
+    "https://karelberka.github.io/Alphafoldology/",
+    "https://github.com/KarelBerka/alphafoldology",
+    "https://www.elixir-czech.cz/services"
+  ],
+  "schema:mentions": [
+    {
+      "@id": "https://www.elixir-czech.cz/",
+      "@type": "schema:Organization",
+      "schema:name": "ELIXIR-CZ"
+    },
+    {
+      "@id": "https://karelberka.github.io/Alphafoldology/",
+      "@type": ["schema:WebApplication", "schema:CreativeWork"],
+      "schema:name": "Alphafoldology",
+      "schema:description": "Interactive genealogy and directory of the AlphaFold and AI structural-biology ecosystem.",
+      "schema:url": {"@id": "https://karelberka.github.io/Alphafoldology/"},
+      "schema:codeRepository": "https://github.com/KarelBerka/alphafoldology",
+      "schema:creator": {"@type": "schema:Person", "schema:name": "Karel Berka"},
+      "dct:rights": "Public website and source-visible repository; no explicit reuse licence confirmed."
+    },
+    {
+      "@id": "https://www.elixir-czech.cz/services",
+      "@type": ["schema:WebPage", "schema:ItemList"],
+      "schema:name": "ELIXIR-CZ Services",
+      "schema:description": "Directory of life-science tools, databases, computing, and storage services provided through ELIXIR-CZ partner institutions.",
+      "schema:url": {"@id": "https://www.elixir-czech.cz/services"},
+      "schema:isPartOf": {"@id": "https://www.elixir-czech.cz/"},
+      "dct:accessRights": "Public directory; individual services range from open access to authenticated access and retain their own access policies and terms."
+    }
+  ]
+}

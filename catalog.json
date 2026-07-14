@@ -1,0 +1,102 @@
+{
+  "$schema": "catalog.schema.json",
+  "id": "https://michalie.github.io/#catalog",
+  "title": "AI for Science - Models, Agents & Tools for Researchers",
+  "description": "Three curated indexes for finding biological foundation models, autonomous science agents, and privacy-aware coding and data tools.",
+  "version": "2.0.0",
+  "date_modified": "2026-07-14",
+  "language": "en",
+  "access_rights": "public",
+  "rights": "Portal catalog data, metadata, and original documentation are licensed under CC BY 4.0; portal maintenance code is MIT. Child-catalog external resources, logos, and trademarks retain their own terms. IMG CAS is affiliation only, not publisher or endorsement.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "code_license": "https://spdx.org/licenses/MIT.html",
+  "repository": "https://github.com/MichaLie/MichaLie.github.io",
+  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.0",
+  "creator": {
+    "name": "Michaela Liegertová",
+    "email": "michaela.liegertova@img.cas.cz",
+    "url": "https://github.com/MichaLie",
+    "affiliation": {
+      "name": "Institute of Molecular Genetics of the Czech Academy of Sciences",
+      "url": "https://www.img.cas.cz/en/"
+    }
+  },
+  "publisher": {
+    "type": "Person",
+    "name": "Michaela Liegertová",
+    "email": "michaela.liegertova@img.cas.cz",
+    "url": "https://github.com/MichaLie",
+    "affiliation": {
+      "name": "Institute of Molecular Genetics of the Czech Academy of Sciences",
+      "url": "https://www.img.cas.cz/en/"
+    }
+  },
+  "dedication": {
+    "name": "ELIXIR-CZ",
+    "url": "https://www.elixir-czech.cz/",
+    "description": "Czech national node of ELIXIR"
+  },
+  "catalogs": [
+    {
+      "id": "https://michalie.github.io/bio-foundation-models-wiki/",
+      "title": "Biological Foundation Models - Researcher Index",
+      "version": "2.0.0",
+      "record_count": 345,
+      "record_type": "models and resources",
+      "landing_page": "https://michalie.github.io/bio-foundation-models-wiki/",
+      "data_distribution": "https://michalie.github.io/bio-foundation-models-wiki/models_final.json",
+      "schema": "https://michalie.github.io/bio-foundation-models-wiki/schema.json",
+      "metadata": "https://michalie.github.io/bio-foundation-models-wiki/metadata.jsonld",
+      "description": "Foundation models, platforms, and benchmarks for biological sequences, structures, molecules, cells, tissue, and multimodal biology."
+    },
+    {
+      "id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+      "title": "Autonomous Science Agents - Researcher Index",
+      "version": "2.0.0",
+      "record_count": 372,
+      "record_type": "systems and benchmarks",
+      "landing_page": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+      "data_distribution": "https://michalie.github.io/autonomous-stem-agents-wiki/agents_final.json",
+      "schema": "https://michalie.github.io/autonomous-stem-agents-wiki/schema.json",
+      "metadata": "https://michalie.github.io/autonomous-stem-agents-wiki/metadata.jsonld",
+      "description": "Scientific agents, self-driving laboratories, simulation systems, and evaluation harnesses with explicit autonomy and access labels."
+    },
+    {
+      "id": "https://michalie.github.io/research-coding-agents-wiki/",
+      "title": "AI Coding and Data Agents for Researchers",
+      "version": "2.0.0",
+      "record_count": 43,
+      "record_type": "tools",
+      "landing_page": "https://michalie.github.io/research-coding-agents-wiki/",
+      "data_distribution": "https://michalie.github.io/research-coding-agents-wiki/tools.json",
+      "schema": "https://michalie.github.io/research-coding-agents-wiki/schema.json",
+      "metadata": "https://michalie.github.io/research-coding-agents-wiki/metadata.jsonld",
+      "description": "Privacy-first coding and data-analysis agents organized around data sensitivity, deployment control, and research use."
+    }
+  ],
+  "related_resources": [
+    {
+      "id": "https://karelberka.github.io/Alphafoldology/",
+      "title": "Alphafoldology",
+      "relationship": "companion resource for the Biological Foundation Models index",
+      "description": "Interactive genealogy and directory of the AlphaFold and AI structural-biology ecosystem.",
+      "landing_page": "https://karelberka.github.io/Alphafoldology/",
+      "source_repository": "https://github.com/KarelBerka/alphafoldology",
+      "community": "ELIXIR-CZ",
+      "included_in_child_catalog": false,
+      "verified": "2026-07-13",
+      "access_note": "Public website and source-visible repository; no explicit reuse licence confirmed."
+    },
+    {
+      "id": "https://www.elixir-czech.cz/services",
+      "title": "ELIXIR-CZ Services",
+      "relationship": "official ELIXIR-CZ infrastructure service directory",
+      "description": "Directory of life-science tools, databases, computing, and storage services provided through ELIXIR-CZ partner institutions.",
+      "landing_page": "https://www.elixir-czech.cz/services",
+      "community": "ELIXIR-CZ",
+      "included_in_child_catalog": false,
+      "verified": "2026-07-14",
+      "access_note": "Public directory; individual services range from open access to authenticated access and retain their own access policies and terms."
+    }
+  ]
+}
