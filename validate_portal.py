@@ -31,6 +31,7 @@ CHILDREN = {
 EXPECTED_RELATED_RESOURCES = {
     "https://karelberka.github.io/Alphafoldology/",
     "https://www.elixir-czech.cz/services",
+    "https://bio.tools/",
 }
 LOCK_PATH = ROOT / "child_catalogs.lock.json"
 

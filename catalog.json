@@ -3,15 +3,15 @@
   "id": "https://michalie.github.io/#catalog",
   "title": "AI for Science - Models, Agents & Tools for Researchers",
   "description": "Three curated indexes for finding biological foundation models, autonomous science agents, and privacy-aware coding and data tools.",
-  "version": "2.0.1",
-  "date_modified": "2026-07-14",
+  "version": "2.1.0",
+  "date_modified": "2026-08-11",
   "language": "en",
   "access_rights": "public",
   "rights": "Portal catalog data, metadata, and original documentation are licensed under CC BY 4.0; portal maintenance code is MIT. Child-catalog external resources, logos, and trademarks retain their own terms. IMG CAS is affiliation only, not publisher or endorsement.",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "code_license": "https://spdx.org/licenses/MIT.html",
   "repository": "https://github.com/MichaLie/MichaLie.github.io",
-  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.0.1",
+  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.1.0",
   "creator": {
     "name": "Michaela Liegertová",
     "email": "michaela.liegertova@img.cas.cz",
@@ -97,6 +97,17 @@
       "included_in_child_catalog": false,
       "verified": "2026-07-14",
       "access_note": "Public directory; individual services range from open access to authenticated access and retain their own access policies and terms."
+    },
+    {
+      "id": "https://bio.tools/",
+      "title": "bio.tools",
+      "relationship": "ELIXIR tools registry complementary to the three AI-focused indexes",
+      "description": "ELIXIR's registry of bioinformatics tools and services - more than 33,000 entries with standardized EDAM annotations and structured community contribution. The primary discovery point for established bioinformatics software; the three indexes here focus on the recent AI-native generation of models, agents, and assistants.",
+      "landing_page": "https://bio.tools/",
+      "community": "ELIXIR",
+      "included_in_child_catalog": false,
+      "verified": "2026-08-11",
+      "access_note": "Public registry with an open API; individual tools retain their own licences and terms."
     }
   ]
 }
