@@ -2,6 +2,16 @@
 
 All notable public changes to this collection are documented here.
 
+## 2.2.0 — 2026-08-13
+
+- Synchronized the portal with the v2.1.0 releases of all three child
+  catalogs after their 2026-08-13 content refresh: Biological Foundation
+  Models 345 → 390 records, Autonomous Science Agents 372 → 438 records,
+  AI Coding & Data Agents 43 → 60 records. Updated `catalog.json`,
+  `child_catalogs.lock.json` (new distribution SHA-256 checksums),
+  `metadata.jsonld`, and the visible index cards accordingly.
+- No portal-level scope, licence, or governance changes.
+
 ## 2.1.0 — 2026-08-11
 
 - Added bio.tools, the ELIXIR tools registry, as a related ecosystem resource
