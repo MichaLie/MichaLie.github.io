@@ -2,6 +2,19 @@
 
 All notable public changes to this collection are documented here.
 
+## 2.2.1 — 2026-08-14
+
+- Added a visible version-and-date line to each catalog card so the most
+  recent published update of every index is legible at a glance. The lines
+  are pinned to `child_catalogs.lock.json` (new per-catalog `updated` field)
+  by a new validator check, so they refresh automatically with every future
+  child release.
+- Synchronized with the presentation-only v2.1.1 releases of all three child
+  catalogs, which added the same version-and-date badge to their headers.
+  Record counts, evidence, and distribution SHA-256 checksums are unchanged.
+- Brought the `dct:modified` date in the DCAT metadata in step with
+  `catalog.json` (it had lagged at 2026-08-11 through the v2.2.0 release).
+
 ## 2.2.0 — 2026-08-13
 
 - Synchronized the portal with the v2.1.0 releases of all three child

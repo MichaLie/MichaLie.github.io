@@ -56,6 +56,13 @@ class MetadataParser(HTMLParser):
             self.capture = False
 
 
+def format_lock_date(iso_date: str) -> str:
+    """Render a lock-file ISO date the way the visible cards print it (e.g. 14 Aug 2026)."""
+    months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    year, month, day = (int(part) for part in iso_date.split("-"))
+    return f"{day} {months[month - 1]} {year}"
+
+
 def load_json_bytes(payload: bytes, source: str) -> tuple[list, str, str]:
     data = json.loads(payload.decode("utf-8"))
     return data, source, hashlib.sha256(payload).hexdigest()
@@ -174,6 +181,19 @@ def main(release: bool = False, remote: bool = False) -> int:
     canonical_counts = [entry["record_count"] for entry in catalog.get("catalogs", [])]
     if card_counts != canonical_counts:
         errors.append(f"router card counts {card_counts} differ from catalog counts {canonical_counts}")
+
+    card_dates = re.findall(r'<span class="vdate">([^<]+)</span>', html)
+    expected_dates = []
+    for entry in catalog.get("catalogs", []):
+        locked = locked_catalogs.get(entry["id"])
+        if locked is None:
+            continue
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", locked.get("updated") or ""):
+            errors.append(f"child_catalogs.lock.json entry lacks a valid updated date: {entry['id']}")
+            continue
+        expected_dates.append(f"v{locked['version']} · updated {format_lock_date(locked['updated'])}")
+    if card_dates != expected_dates:
+        errors.append(f"router card version/date lines {card_dates} differ from lock {expected_dates}")
 
     if re.search(r'href=["\']repos/', html):
         errors.append("index.html contains preview-only child routes")
