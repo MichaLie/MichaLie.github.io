@@ -1,24 +1,27 @@
 {
   "lock_version": 1,
-  "generated": "2026-08-13",
+  "generated": "2026-08-14",
   "catalogs": [
     {
       "id": "https://michalie.github.io/bio-foundation-models-wiki/",
-      "version": "2.1.0",
+      "version": "2.1.1",
+      "updated": "2026-08-14",
       "record_count": 390,
       "data_distribution": "https://michalie.github.io/bio-foundation-models-wiki/models_final.json",
       "sha256": "c271a7e3cdb9fccd3feba7f0c715df4a1b8a8d86212c982b9091cd81174614d6"
     },
     {
       "id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
-      "version": "2.1.0",
+      "version": "2.1.1",
+      "updated": "2026-08-14",
       "record_count": 438,
       "data_distribution": "https://michalie.github.io/autonomous-stem-agents-wiki/agents_final.json",
       "sha256": "e208c644b00e959ac489e2f175f59cf2b82413fb44c3d52ed0e57041f9f587a7"
     },
     {
       "id": "https://michalie.github.io/research-coding-agents-wiki/",
-      "version": "2.1.0",
+      "version": "2.1.1",
+      "updated": "2026-08-14",
       "record_count": 60,
       "data_distribution": "https://michalie.github.io/research-coding-agents-wiki/tools.json",
       "sha256": "13c736f522e8df6acedbaea1e4acacff7fcbec270d7fbcd17e5a75078b19eb0a"
