@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
+from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -14,17 +16,18 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 
 ROOT = Path(__file__).resolve().parent
+CARD_PATTERN = re.compile(r'(<a class="card" href="([^"]+)">)(.*?)(</a>)', re.DOTALL)
 CHILDREN = {
     "https://michalie.github.io/bio-foundation-models-wiki/": (
-        ROOT / "repos/Foundation_models/models_final.json",
+        Path("Foundation_models/models_final.json"),
         "https://michalie.github.io/bio-foundation-models-wiki/models_final.json",
     ),
     "https://michalie.github.io/autonomous-stem-agents-wiki/": (
-        ROOT / "repos/Autonomous_Agents/agents_final.json",
+        Path("Autonomous_Agents/agents_final.json"),
         "https://michalie.github.io/autonomous-stem-agents-wiki/agents_final.json",
     ),
     "https://michalie.github.io/research-coding-agents-wiki/": (
-        ROOT / "repos/Coding_Agents/tools.json",
+        Path("Coding_Agents/tools.json"),
         "https://michalie.github.io/research-coding-agents-wiki/tools.json",
     ),
 }
@@ -59,8 +62,16 @@ class MetadataParser(HTMLParser):
 def format_lock_date(iso_date: str) -> str:
     """Render a lock-file ISO date the way the visible cards print it (e.g. 14 Aug 2026)."""
     months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-    year, month, day = (int(part) for part in iso_date.split("-"))
-    return f"{day} {months[month - 1]} {year}"
+    value = date.fromisoformat(iso_date)
+    return f"{value.day} {months[value.month - 1]} {value.year}"
+
+
+def local_child_path(relative_path: Path) -> Path:
+    """Find a sibling checkout, retaining the historical nested layout."""
+    sibling = ROOT.parent / relative_path
+    if sibling.is_file():
+        return sibling
+    return ROOT / "repos" / relative_path
 
 
 def load_json_bytes(payload: bytes, source: str) -> tuple[list, str, str]:
@@ -70,7 +81,7 @@ def load_json_bytes(payload: bytes, source: str) -> tuple[list, str, str]:
 
 def load_child_catalog(local_path: Path, public_url: str, force_remote: bool) -> tuple[list, str, str]:
     if local_path.is_file() and not force_remote:
-        return load_json_bytes(local_path.read_bytes(), f"local:{local_path.relative_to(ROOT)}")
+        return load_json_bytes(local_path.read_bytes(), f"local:{os.path.relpath(local_path, ROOT)}")
     request = Request(public_url, headers={"User-Agent": "AI-for-Science-portal-validator/2.0"})
     with urlopen(request, timeout=30) as response:
         payload = response.read(50_000_001)
@@ -88,6 +99,9 @@ def main(release: bool = False, remote: bool = False) -> int:
     schema = json.loads((ROOT / "catalog.schema.json").read_text(encoding="utf-8"))
     for error in Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(catalog):
         errors.append(f"catalog.json {'/'.join(map(str, error.absolute_path))}: {error.message}")
+    catalog_ids = [entry.get("id") for entry in catalog.get("catalogs", [])]
+    if len(catalog_ids) != 3 or set(catalog_ids) != set(CHILDREN):
+        errors.append("catalog.json must contain each canonical child ID exactly once")
 
     expected_counts = {}
     child_sources = []
@@ -100,14 +114,15 @@ def main(release: bool = False, remote: bool = False) -> int:
         if locked is None:
             errors.append(f"child catalog is missing from child_catalogs.lock.json: {entry['id']}")
             continue
-        local_path, public_url = child_config
+        relative_path, public_url = child_config
+        local_path = local_child_path(relative_path)
         if public_url != entry.get("data_distribution") or public_url != locked.get("data_distribution"):
             errors.append(f"child distribution mismatch: {entry['id']}")
         if entry.get("version") != locked.get("version"):
             errors.append(f"child version differs from lock: {entry['id']}")
         if local_path.is_file() or remote:
             try:
-                child, source, digest = load_child_catalog(*child_config, force_remote=remote)
+                child, source, digest = load_child_catalog(local_path, public_url, force_remote=remote)
             except Exception as exc:
                 errors.append(f"cannot load child catalog {entry.get('id')}: {exc}")
                 continue
@@ -118,6 +133,19 @@ def main(release: bool = False, remote: bool = False) -> int:
             child_sources.append(source)
             if digest != locked.get("sha256"):
                 errors.append(f"child SHA-256 differs from lock: {entry['id']} ({digest})")
+            if not remote:
+                metadata_path = local_path.with_name("resource_metadata.json")
+                try:
+                    child_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+                except (OSError, ValueError) as exc:
+                    errors.append(f"cannot read local child metadata for {entry['id']}: {exc}")
+                else:
+                    if child_metadata.get("identifier") != entry["id"]:
+                        errors.append(f"local child identifier differs from portal: {entry['id']}")
+                    if child_metadata.get("resource_version") != locked.get("version"):
+                        errors.append(f"local child version differs from lock: {entry['id']}")
+                    if child_metadata.get("modified") != locked.get("updated"):
+                        errors.append(f"local child modified date differs from lock: {entry['id']}")
         else:
             actual = locked.get("record_count")
             child_sources.append(f"lock:{LOCK_PATH.name}#{entry['id']}")
@@ -177,23 +205,31 @@ def main(release: bool = False, remote: bool = False) -> int:
     if 'id="ecosystem-title"' not in html:
         errors.append("index.html omits the related community/infrastructure section")
 
-    card_counts = [int(value) for value in re.findall(r'<span class="count c-(?:bio|agent|code)">(\d+)</span>', html)]
+    cards = list(CARD_PATTERN.finditer(html))
+    card_ids = [card[2] for card in cards]
+    if len(card_ids) != 3 or set(card_ids) != set(CHILDREN):
+        errors.append("router must contain exactly one card for each canonical child ID")
+    cards_by_id = {card[2]: card[3] for card in cards}
     canonical_counts = [entry["record_count"] for entry in catalog.get("catalogs", [])]
-    if card_counts != canonical_counts:
-        errors.append(f"router card counts {card_counts} differ from catalog counts {canonical_counts}")
-
-    card_dates = re.findall(r'<span class="vdate">([^<]+)</span>', html)
-    expected_dates = []
     for entry in catalog.get("catalogs", []):
+        card = cards_by_id.get(entry["id"], "")
+        counts = re.findall(r'<span class="count c-(?:bio|agent|code)">(\d+)</span>', card)
+        if counts != [str(entry["record_count"])]:
+            errors.append(f"router card count differs from catalog count for {entry['id']}")
         locked = locked_catalogs.get(entry["id"])
         if locked is None:
             continue
-        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", locked.get("updated") or ""):
+        try:
+            updated = locked.get("updated") or ""
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", updated):
+                raise ValueError("expected YYYY-MM-DD")
+            formatted_date = format_lock_date(updated)
+        except (ValueError, TypeError):
             errors.append(f"child_catalogs.lock.json entry lacks a valid updated date: {entry['id']}")
             continue
-        expected_dates.append(f"v{locked['version']} · updated {format_lock_date(locked['updated'])}")
-    if card_dates != expected_dates:
-        errors.append(f"router card version/date lines {card_dates} differ from lock {expected_dates}")
+        card_dates = re.findall(r'<span class="vdate">([^<]+)</span>', card)
+        if card_dates != [f"v{locked['version']} · updated {formatted_date}"]:
+            errors.append(f"router card version/date differs from lock for {entry['id']}")
 
     if re.search(r'href=["\']repos/', html):
         errors.append("index.html contains preview-only child routes")
@@ -227,6 +263,13 @@ def main(release: bool = False, remote: bool = False) -> int:
         errors.append("metadata.jsonld licence differs from catalog.json")
     if standalone.get("schema:version") != catalog.get("version"):
         errors.append("metadata.jsonld version differs from catalog.json")
+    if standalone.get("dct:modified", {}).get("@value") != catalog.get("date_modified"):
+        errors.append("metadata.jsonld modified date differs from catalog.json")
+    if standalone.get("schema:numberOfItems") != 3:
+        errors.append("metadata.jsonld must describe exactly three child catalogs")
+    provenance_ref = standalone.get("prov:wasGeneratedBy", {}).get("@id")
+    if provenance_ref != catalog.get("release_ref"):
+        errors.append("metadata.jsonld release reference differs from catalog.json")
     if standalone.get("dct:publisher", {}).get("schema:name") != publisher.get("name"):
         errors.append("metadata.jsonld publisher differs from catalog.json")
 

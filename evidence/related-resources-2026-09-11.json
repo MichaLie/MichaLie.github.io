@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-11",
+  "scope": "Portal community links only; no child record counts affected.",
+  "checks": [
+    {
+      "id": "https://karelberka.github.io/Alphafoldology/",
+      "status": "verified",
+      "sources": [
+        "https://karelberka.github.io/Alphafoldology/",
+        "https://github.com/KarelBerka/Alphafoldology",
+        "https://api.github.com/repos/KarelBerka/Alphafoldology/contents"
+      ],
+      "evidence": "Live HTTP 200 HTML contains genealogy map and structural biology tool categories. Repository is public, active, and its root listing has no license file; GitHub license metadata is null. Existing cautious reuse wording retained.",
+      "access_level": "primary HTML plus repository metadata and root file listing"
+    },
+    {
+      "id": "https://www.elixir-czech.cz/services",
+      "status": "verified",
+      "sources": [
+        "https://www.elixir-czech.cz/services"
+      ],
+      "evidence": "Official directory describes partner services, open access and service-dependent authentication through ELIXIR AAI. Existing description/access wording supported.",
+      "access_level": "primary HTML text"
+    },
+    {
+      "id": "https://bio.tools/",
+      "status": "access-limited",
+      "sources": [
+        "https://bio.tools/"
+      ],
+      "evidence": "Direct fetch returned HTTP 521; web reader returned an internal error. This is not evidence that the registry is discontinued. Retained previous verification date and canonical link; removed the nonessential volatile record-count claim. A separate headed-browser check also displayed the SDU 521 server-unavailable page; this is a live upstream failure, not merely a text-reader limitation.",
+      "access_level": "server error; current content not appraised"
+    }
+  ]
+}

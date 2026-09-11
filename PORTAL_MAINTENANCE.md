@@ -10,10 +10,15 @@ After any child release, update the matching `record_count` and `version` in `ca
 
 Related community or infrastructure resources belong in `related_resources`, `dct:relation`, `schema:relatedLink`, and the visible ecosystem section. They are not child catalogs, must carry `included_in_child_catalog:false`, and must never change the three catalog counts or `schema:numberOfItems: 3`.
 
+Local validation first uses sibling checkouts (`../Foundation_models/`, `../Autonomous_Agents/`, and `../Coding_Agents/`), then the historical `repos/` layout if a sibling is absent. When a local catalog is present, its exact bytes, count, resource identifier, version, and modified date must agree with the portal lock. Standalone clones without children use the lock; `--remote` always uses the public distributions.
+
+To prepare a local candidate, run `python3 sync_catalogs.py --version <portal-version> --date <YYYY-MM-DD>` after the child data and metadata are final. This derives counts, versions, dates and checksums from the local children, synchronizes standalone/embedded metadata and visible cards, updates the sitemap, and leaves `release_ref` null. It is repeatable and makes no network requests. Review the diff and write the corresponding changelog/evidence note before validation.
+
 ## Required local gate
 
 ```bash
 python3 -m pip install -r requirements-maintenance.txt
+python3 -m unittest discover -s tests -v
 python3 validate_portal.py
 python3 validate_portal.py --remote
 python3 validate_portal.py --release

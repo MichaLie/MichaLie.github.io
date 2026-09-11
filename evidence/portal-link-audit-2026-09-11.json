@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-11",
+  "method": "HTTP GET with redirects; read one response byte; relative resources served locally",
+  "links": [
+    {
+      "href": "#main",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "catalog.json",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "catalog.schema.json",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://bio.tools/",
+      "http_status": 521,
+      "status": "upstream-error"
+    },
+    {
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://elixir-europe.org/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://github.com/KarelBerka/alphafoldology",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://karelberka.github.io/Alphafoldology/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://michalie.github.io/bio-foundation-models-wiki/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://michalie.github.io/research-coding-agents-wiki/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://www.elixir-czech.cz/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://www.elixir-czech.cz/services",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "https://www.img.cas.cz/en/",
+      "http_status": 200,
+      "status": "reachable"
+    },
+    {
+      "href": "mailto:michaela.liegertova@img.cas.cz?subject=AI%20for%20Science%20indexes",
+      "status": "non-HTTP link"
+    },
+    {
+      "href": "metadata.jsonld",
+      "http_status": 200,
+      "status": "reachable"
+    }
+  ]
+}

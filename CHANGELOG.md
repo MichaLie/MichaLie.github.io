@@ -2,6 +2,25 @@
 
 All notable public changes to this collection are documented here.
 
+## 2.3.0 — 2026-09-11
+
+- Synchronized the three v2.2.0 catalogs: Biological Foundation Models
+  390 → 400, Autonomous Science Agents 438 → 458, and Coding & Data Agents
+  60 → 61. Counts, versions, modification dates, distribution checksums,
+  visible cards, JSON-LD and sitemap agree with the canonical child files.
+- Added `sync_catalogs.py` for repeatable local synchronization. Validation
+  now checks sibling checkouts as well as the historical nested layout,
+  including child resource identity, version and date. Card updates and
+  validation use catalog identity rather than array order, and malformed
+  child metadata is rejected before portal files are written. Eleven
+  regression tests cover these behaviors and run in the quality workflow.
+- Rechecked related resources and removed bio.tools' volatile record count.
+  Its canonical link is retained while the upstream site returns HTTP 521;
+  that failed check does not advance its evidence-verification date.
+- Recorded the baseline, source adjudications, independent cross-reviews,
+  local browser checks and publication sequence in `evidence/`. Set the
+  immutable release reference after owner review and publication authorization.
+
 ## 2.2.1 — 2026-08-14
 
 - Added a visible version-and-date line to each catalog card so the most

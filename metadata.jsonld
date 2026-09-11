@@ -20,7 +20,7 @@
   },
   "dct:modified": {
     "@type": "xsd:date",
-    "@value": "2026-08-14"
+    "@value": "2026-09-11"
   },
   "dct:accessRights": {
     "@id": "http://publications.europa.eu/resource/authority/access-right/PUBLIC"
@@ -77,11 +77,11 @@
         "schema:Dataset"
       ],
       "dct:title": "Biological Foundation Models - Researcher Index",
-      "schema:version": "2.1.1",
+      "schema:version": "2.2.0",
       "dcat:landingPage": {
         "@id": "https://michalie.github.io/bio-foundation-models-wiki/"
       },
-      "schema:numberOfItems": 390
+      "schema:numberOfItems": 400
     },
     {
       "@id": "https://michalie.github.io/autonomous-stem-agents-wiki/",
@@ -90,11 +90,11 @@
         "schema:Dataset"
       ],
       "dct:title": "Autonomous Science Agents - Researcher Index",
-      "schema:version": "2.1.1",
+      "schema:version": "2.2.0",
       "dcat:landingPage": {
         "@id": "https://michalie.github.io/autonomous-stem-agents-wiki/"
       },
-      "schema:numberOfItems": 438
+      "schema:numberOfItems": 458
     },
     {
       "@id": "https://michalie.github.io/research-coding-agents-wiki/",
@@ -103,11 +103,11 @@
         "schema:Dataset"
       ],
       "dct:title": "AI Coding and Data Agents for Researchers",
-      "schema:version": "2.1.1",
+      "schema:version": "2.2.0",
       "dcat:landingPage": {
         "@id": "https://michalie.github.io/research-coding-agents-wiki/"
       },
-      "schema:numberOfItems": 60
+      "schema:numberOfItems": 61
     }
   ],
   "dcat:distribution": [
@@ -157,11 +157,11 @@
     "@id": "https://michalie.github.io/"
   },
   "schema:numberOfItems": 3,
-  "schema:version": "2.2.1",
+  "schema:version": "2.3.0",
   "prov:wasGeneratedBy": {
-    "@id": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.2.1",
     "@type": "prov:Activity",
-    "dct:type": "Versioned release build"
+    "@id": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.3.0",
+    "dct:type": "Curated catalog release"
   },
   "dct:relation": [
     {

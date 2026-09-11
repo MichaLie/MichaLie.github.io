@@ -1,0 +1,768 @@
+{
+  "review_date": "2026-09-11",
+  "base_url": "http://127.0.0.1:8765/",
+  "catalogs": [
+    {
+      "folder": "Foundation_models",
+      "title": "Biological Foundation Models — Researcher Index",
+      "filters": [
+        {
+          "group": "modchips",
+          "label": "DNA / Genome54",
+          "shown": 54,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "RNA36",
+          "shown": 36,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Protein74",
+          "shown": 74,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Structure / Complex28",
+          "shown": 28,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Small molecule48",
+          "shown": 48,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Single-cell / Omics41",
+          "shown": 41,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Spatial / Pathology44",
+          "shown": 44,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Multimodal / Bio-LLM26",
+          "shown": 26,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Platform / Hub21",
+          "shown": 21,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "modchips",
+          "label": "Benchmark / Dataset28",
+          "shown": 28,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Open code + weights211",
+          "shown": 211,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Open code, gated/partial weights122",
+          "shown": 122,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Model hub20",
+          "shown": 20,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Web / API / commercial22",
+          "shown": 22,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Platform / framework24",
+          "shown": 24,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Paper / preprint only1",
+          "shown": 1,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auditchips",
+          "label": "Verified258",
+          "shown": 258,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auditchips",
+          "label": "With limits142",
+          "shown": 142,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Downloadable weights",
+          "shown": 320,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Has code repo",
+          "shown": 397,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "⭐ Canonical only",
+          "shown": 55,
+          "pressed": "true",
+          "count_matches": true
+        }
+      ],
+      "data_classes": [],
+      "viewports": [
+        {
+          "document_width": 1440,
+          "viewport": 1440,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "sticky",
+          "controls_bottom": 235.109375,
+          "header_top": 235,
+          "document_fits": true,
+          "header_alignment": true
+        },
+        {
+          "document_width": 1024,
+          "viewport": 1024,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "sticky",
+          "controls_bottom": 267.578125,
+          "header_top": 268,
+          "document_fits": true,
+          "header_alignment": true
+        },
+        {
+          "document_width": 900,
+          "viewport": 900,
+          "table_scrolls": true,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.21875,
+          "header_top": -349.703125,
+          "document_fits": true,
+          "header_alignment": null
+        },
+        {
+          "document_width": 390,
+          "viewport": 390,
+          "table_scrolls": true,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.421875,
+          "header_top": -349.90625,
+          "document_fits": true,
+          "header_alignment": null
+        }
+      ],
+      "total": 400,
+      "empty_search": true,
+      "reset_restores_all": true,
+      "keyboard_expansion": true,
+      "keyboard_collapse": true,
+      "page_errors": []
+    },
+    {
+      "folder": "Autonomous_Agents",
+      "title": "Autonomous Science Agents — Researcher Index",
+      "filters": [
+        {
+          "group": "catchips",
+          "label": "Cross-domain77",
+          "shown": 77,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "catchips",
+          "label": "Biology & Medicine99",
+          "shown": 99,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "catchips",
+          "label": "Chemistry & Materials85",
+          "shown": 85,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "catchips",
+          "label": "Physics / Astronomy / Eng.91",
+          "shown": 91,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "catchips",
+          "label": "Benchmarks & Harnesses106",
+          "shown": 106,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Open source262",
+          "shown": 262,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Source available11",
+          "shown": 11,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Open data23",
+          "shown": 23,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Platform / API20",
+          "shown": 20,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Lab-gated27",
+          "shown": 27,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "Paper-only111",
+          "shown": 111,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "accchips",
+          "label": "List4",
+          "shown": 4,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "A1 Assistant1",
+          "shown": 1,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "A2 Tool agent37",
+          "shown": 37,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "A3 Workflow agent156",
+          "shown": 156,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "A4 In-silico scientist114",
+          "shown": 114,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "A5 Lab/physical scientist44",
+          "shown": 44,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "auchips",
+          "label": "B Benchmark/harness106",
+          "shown": 106,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Has repo",
+          "shown": 329,
+          "pressed": "true",
+          "count_matches": true
+        }
+      ],
+      "data_classes": [],
+      "viewports": [
+        {
+          "document_width": 1440,
+          "viewport": 1440,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "sticky",
+          "controls_bottom": 235.109375,
+          "header_top": 235,
+          "document_fits": true,
+          "header_alignment": true
+        },
+        {
+          "document_width": 1024,
+          "viewport": 1024,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "sticky",
+          "controls_bottom": 235.109375,
+          "header_top": 235,
+          "document_fits": true,
+          "header_alignment": true
+        },
+        {
+          "document_width": 900,
+          "viewport": 900,
+          "table_scrolls": true,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.46875,
+          "header_top": -349.953125,
+          "document_fits": true,
+          "header_alignment": null
+        },
+        {
+          "document_width": 390,
+          "viewport": 390,
+          "table_scrolls": true,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.921875,
+          "header_top": -350.40625,
+          "document_fits": true,
+          "header_alignment": null
+        }
+      ],
+      "total": 458,
+      "empty_search": true,
+      "reset_restores_all": true,
+      "keyboard_expansion": true,
+      "keyboard_collapse": true,
+      "page_errors": []
+    },
+    {
+      "folder": "Coding_Agents",
+      "title": "AI Coding & Data Agents for Researchers",
+      "filters": [
+        {
+          "group": "typechips",
+          "label": "IDE / editor14",
+          "shown": 14,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "typechips",
+          "label": "Terminal / CLI24",
+          "shown": 24,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "typechips",
+          "label": "Cloud / autonomous17",
+          "shown": 17,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "typechips",
+          "label": "Data analysis / notebook6",
+          "shown": 6,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "dhchips",
+          "label": "Local / self-host29",
+          "shown": 29,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "dhchips",
+          "label": "Zero-retention1",
+          "shown": 1,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "dhchips",
+          "label": "No-train28",
+          "shown": 28,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "dhchips",
+          "label": "Opt-out2",
+          "shown": 2,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "dhchips",
+          "label": "Unclear1",
+          "shown": 1,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "capchips",
+          "label": "Frontier30",
+          "shown": 30,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "capchips",
+          "label": "Strong24",
+          "shown": 24,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "capchips",
+          "label": "Capable5",
+          "shown": 5,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "capchips",
+          "label": "Basic2",
+          "shown": 2,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Widely used ★",
+          "shown": 18,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Runs locally",
+          "shown": 35,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Self-hostable",
+          "shown": 37,
+          "pressed": "true",
+          "count_matches": true
+        },
+        {
+          "group": "togchips",
+          "label": "Free / academic",
+          "shown": 61,
+          "pressed": "true",
+          "count_matches": true
+        }
+      ],
+      "data_classes": [
+        {
+          "key": "nonsensitive",
+          "pressed": "true",
+          "rows": 61,
+          "dimmed": 0,
+          "hint": "Non-sensitive: 61 ready · 0 with config/tier · 0 not appropriate. (rows dimmed = not appropriate for this data)",
+          "dim_count_matches_source": true
+        },
+        {
+          "key": "personal",
+          "pressed": "true",
+          "rows": 61,
+          "dimmed": 4,
+          "hint": "Personal (pseudonymised): 0 ready · 57 with config/tier · 4 not appropriate. (rows dimmed = not appropriate for this data)",
+          "dim_count_matches_source": true
+        },
+        {
+          "key": "special",
+          "pressed": "true",
+          "rows": 61,
+          "dimmed": 28,
+          "hint": "Special-category: 0 ready · 33 with config/tier · 28 not appropriate. (rows dimmed = not appropriate for this data)\nOnly tools that run on infrastructure you control are suitable — cloud services, even with ZDR / HIPAA-BAA, are not recommended for identifiable or controlled-access (DUA) data. Confirm with your DPO / IRB.",
+          "dim_count_matches_source": true
+        }
+      ],
+      "viewports": [
+        {
+          "document_width": 1440,
+          "viewport": 1440,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "static",
+          "controls_bottom": 235.109375,
+          "header_top": -350.484375,
+          "document_fits": true,
+          "header_alignment": null
+        },
+        {
+          "document_width": 1024,
+          "viewport": 1024,
+          "table_scrolls": false,
+          "controls_position": "sticky",
+          "header_position": "static",
+          "controls_bottom": 235.109375,
+          "header_top": -349.53125,
+          "document_fits": true,
+          "header_alignment": null
+        },
+        {
+          "document_width": 900,
+          "viewport": 900,
+          "table_scrolls": false,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.8125,
+          "header_top": -350.296875,
+          "document_fits": true,
+          "header_alignment": null
+        },
+        {
+          "document_width": 390,
+          "viewport": 390,
+          "table_scrolls": true,
+          "controls_position": "static",
+          "header_position": "static",
+          "controls_bottom": -421.390625,
+          "header_top": -349.875,
+          "document_fits": true,
+          "header_alignment": null
+        }
+      ],
+      "total": 61,
+      "empty_search": true,
+      "reset_restores_all": true,
+      "keyboard_expansion": true,
+      "keyboard_collapse": true,
+      "page_errors": [],
+      "specific_checks": {
+        "unclear_ids": [
+          "rca-zerve"
+        ],
+        "nobie_absent": true,
+        "rca-pi": {
+          "row": "▸\tPi★Earendil Works / Mario Zechner and contributors\tCLI\tLocal\n▸ Local endpoint; install telemetry/analytics and sharing disabled; no cloud inference\n\tStrong↔ model\t✓\t⚠\t⚠\t📄 💲 🔒",
+          "expanded": "true"
+        },
+        "rca-zencoder": {
+          "row": "▸\tZencoder★For Good AI Inc. (dba Zencoder Inc.)\tIDE\tLocal\n▸ Private deployment using own local models and useDefaultProviders:false; contract and ancillary egress controls required\n\tStrong↔ model\t✓\t⚠\t⚠\t📄 💲 🔒",
+          "expanded": "true"
+        },
+        "rca-clusy": {
+          "row": "▸\tClusyClusy Inc. (Claymont, DE, USA)\tCloud\tNo-train\n▸ no qualifying route; Enterprise contract review required before any personal data\n\tCapable\t✓\t✗\t✗\t📄 💲 🔒",
+          "expanded": "true"
+        }
+      }
+    }
+  ],
+  "portal": {
+    "viewports": [
+      {
+        "width": 1440,
+        "document_width": 1440,
+        "cards": [
+          {
+            "href": "https://michalie.github.io/bio-foundation-models-wiki/",
+            "count": "400",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+            "count": "458",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/research-coding-agents-wiki/",
+            "count": "61",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/elixir-cz-logo.svg",
+            "loaded": true,
+            "alt": "ELIXIR-CZ"
+          },
+          {
+            "src": "assets/img-logo-color-transparent.png",
+            "loaded": true,
+            "alt": "IMG affiliation — Institute of Molecular Genetics"
+          }
+        ]
+      },
+      {
+        "width": 1024,
+        "document_width": 1024,
+        "cards": [
+          {
+            "href": "https://michalie.github.io/bio-foundation-models-wiki/",
+            "count": "400",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+            "count": "458",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/research-coding-agents-wiki/",
+            "count": "61",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/elixir-cz-logo.svg",
+            "loaded": true,
+            "alt": "ELIXIR-CZ"
+          },
+          {
+            "src": "assets/img-logo-color-transparent.png",
+            "loaded": true,
+            "alt": "IMG affiliation — Institute of Molecular Genetics"
+          }
+        ]
+      },
+      {
+        "width": 900,
+        "document_width": 900,
+        "cards": [
+          {
+            "href": "https://michalie.github.io/bio-foundation-models-wiki/",
+            "count": "400",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+            "count": "458",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/research-coding-agents-wiki/",
+            "count": "61",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/elixir-cz-logo.svg",
+            "loaded": true,
+            "alt": "ELIXIR-CZ"
+          },
+          {
+            "src": "assets/img-logo-color-transparent.png",
+            "loaded": true,
+            "alt": "IMG affiliation — Institute of Molecular Genetics"
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "document_width": 390,
+        "cards": [
+          {
+            "href": "https://michalie.github.io/bio-foundation-models-wiki/",
+            "count": "400",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+            "count": "458",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          },
+          {
+            "href": "https://michalie.github.io/research-coding-agents-wiki/",
+            "count": "61",
+            "date": "v2.2.0 · updated 11 Sep 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "assets/elixir-cz-logo.svg",
+            "loaded": true,
+            "alt": "ELIXIR-CZ"
+          },
+          {
+            "src": "assets/img-logo-color-transparent.png",
+            "loaded": true,
+            "alt": "IMG affiliation — Institute of Molecular Genetics"
+          }
+        ]
+      }
+    ],
+    "keyboard_focus": {
+      "tag": "A",
+      "href": "#main",
+      "text": "Skip to the indexes"
+    },
+    "page_errors": []
+  },
+  "screenshot_note": "Viewport screenshots inspected locally; captured with headless Chrome after the headed session timed out during image capture."
+}

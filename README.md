@@ -26,6 +26,10 @@ The collection supports findability, accessibility, interoperability, and reuse 
 - [Versioned child-catalog lock](child_catalogs.lock.json)
 - [Maintenance and release protocol](PORTAL_MAINTENANCE.md)
 
+Local maintainers can synchronize the portal from the three child checkouts with
+[`sync_catalogs.py`](sync_catalogs.py). It derives collection summaries and checksums,
+updates the page and sitemap, and leaves publication for the reviewed release step.
+
 FAIR is treated as an ongoing stewardship practice. It does not certify the scientific validity, security, legal suitability, or availability of an indexed external resource.
 
 ## ELIXIR-CZ community resources
