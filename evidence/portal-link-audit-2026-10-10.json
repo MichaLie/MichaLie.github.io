@@ -1,0 +1,65 @@
+{
+ "checked": "2026-10-10",
+ "results": [
+  {
+   "url": "https://bio.tools/",
+   "status": 200,
+   "final_url": "https://bio.tools/"
+  },
+  {
+   "url": "https://creativecommons.org/licenses/by/4.0/",
+   "status": 200,
+   "final_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+   "url": "https://elixir-europe.org/",
+   "status": 200,
+   "final_url": "https://elixir-europe.org/"
+  },
+  {
+   "url": "https://github.com/KarelBerka/alphafoldology",
+   "status": 200,
+   "final_url": "https://github.com/KarelBerka/alphafoldology"
+  },
+  {
+   "url": "https://karelberka.github.io/Alphafoldology/",
+   "status": 200,
+   "final_url": "https://karelberka.github.io/Alphafoldology/"
+  },
+  {
+   "url": "https://michalie.github.io/",
+   "status": 200,
+   "final_url": "https://michalie.github.io/"
+  },
+  {
+   "url": "https://michalie.github.io/autonomous-stem-agents-wiki/",
+   "status": 200,
+   "final_url": "https://michalie.github.io/autonomous-stem-agents-wiki/"
+  },
+  {
+   "url": "https://michalie.github.io/bio-foundation-models-wiki/",
+   "status": 200,
+   "final_url": "https://michalie.github.io/bio-foundation-models-wiki/"
+  },
+  {
+   "url": "https://michalie.github.io/research-coding-agents-wiki/",
+   "status": 200,
+   "final_url": "https://michalie.github.io/research-coding-agents-wiki/"
+  },
+  {
+   "url": "https://www.elixir-czech.cz/",
+   "status": 200,
+   "final_url": "https://www.elixir-czech.cz/"
+  },
+  {
+   "url": "https://www.elixir-czech.cz/services",
+   "status": 200,
+   "final_url": "https://www.elixir-czech.cz/services"
+  },
+  {
+   "url": "https://www.img.cas.cz/en/",
+   "status": 200,
+   "final_url": "https://www.img.cas.cz/en/"
+  }
+ ]
+}
