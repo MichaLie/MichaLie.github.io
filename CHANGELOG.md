@@ -10,6 +10,7 @@ All notable public changes to this collection are documented here.
   visible cards, JSON-LD and sitemap agree with the canonical child files.
 - Rechecked every external link on the page; bio.tools resolves again.
 - Recorded the local refresh, link check and browser review in `evidence/`.
+- Set the immutable release reference after owner review and publication authorization.
 
 ## 2.3.0 — 2026-09-11
 

@@ -11,7 +11,7 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "code_license": "https://spdx.org/licenses/MIT.html",
   "repository": "https://github.com/MichaLie/MichaLie.github.io",
-  "release_ref": null,
+  "release_ref": "https://github.com/MichaLie/MichaLie.github.io/releases/tag/v2.4.0",
   "creator": {
     "name": "Michaela Liegertová",
     "email": "michaela.liegertova@img.cas.cz",
