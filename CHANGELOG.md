@@ -2,6 +2,15 @@
 
 All notable public changes to this collection are documented here.
 
+## 2.5.0 — 2026-11-06
+
+- Synchronized the three v2.4.0 catalogs: Biological Foundation Models
+  486 → 538, Autonomous Science Agents 542 → 610, and Coding & Data Agents
+  71 → 78. Counts, versions, modification dates, distribution checksums,
+  visible cards, JSON-LD and sitemap agree with the canonical child files.
+- Rechecked every external link on the page (all resolve).
+- Recorded the local refresh, link check and browser review in `evidence/`.
+
 ## 2.4.0 — 2026-10-10
 
 - Synchronized the three v2.3.0 catalogs: Biological Foundation Models
